@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Photophone</title>
+  
+  <link rel="stylesheet" type="text/css" href="<%= BASEURL %>/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="<%= BASEURL %>/assets/css/index.css">
+  
+  <script src="<%= BASEURL %>/assets/lib/jquery-2.2.4.min.js"></script>
+  <script src="<%= BASEURL %>/assets/lib/socket.io-1.2.0.js"></script>
+  <script>  
+    
+    var socket = io('<%= BASEURL %>');
+
+    $(function(){
+      socket.on('audio/play', function(){
+        $('#audio').trigger('play');
+      });
+      
+      socket.on('audio/stop', function(){
+        $('#audio').trigger('stop').prop("currentTime",0);
+      });
+    });
+  </script> 
+</head>
+<body>
+  <audio id="audio" controls src="<%= BASEURL %>/sounds/blablabla.mp3"></audio>
+  
+</body>
+</html>

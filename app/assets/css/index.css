@@ -1,0 +1,45 @@
+.Entry {
+  width:100%;
+  box-shadow:0 0 20px #ccc;
+  margin-bottom:30px;
+}
+
+.Entry__Screenshot {
+  position:relative;
+}
+
+.Entry__Screenshot img {
+  max-width:100%
+}
+
+
+.Entry__Webcamshot img {
+  width:200px;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.6);
+}
+
+.Entry__WorkspaceItem {
+  display:block;
+  font-size:0;
+  border-top:solid 1px #ccc
+}
+
+.Entry__Process {
+  display:inline-block;
+  font-size:14px;
+  width:20%;
+  vertical-align:top;
+  padding:5px 10px;
+  color:gray;
+}
+
+.Entry__Window {
+  display:inline-block;
+  font-size:14px;
+  width:80%;
+  vertical-align:top;
+  padding:5px 10px;
+}
